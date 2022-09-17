@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/veve-cmd-api/src",
+  "monorepo": true,
+  "root": "apps/veve-cmd-api",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/veve-cmd-api/tsconfig.app.json"
+  },
+  "projects": {
+    "veve-cmd-api": {
+      "type": "application",
+      "root": "apps/veve-cmd-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/veve-cmd-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/veve-cmd-api/tsconfig.app.json"
+      }
+    },
+    "veve-qry-api": {
+      "type": "application",
+      "root": "apps/veve-qry-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/veve-qry-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/veve-qry-api/tsconfig.app.json"
+      }
+    }
+  }
+}
